@@ -17,15 +17,21 @@
         self.checkBox = [[ASImageNode alloc] init];
         self.iconLabel = [[ASTextNode alloc] init];
         self.nameLabel = [[ASTextNode alloc] init];
+        
+        self.checkBox.frame = CGRectMake(0, 0, 30, 30);
+        self.iconLabel.frame = CGRectMake(0, 0, 50, 50);
+        self.nameLabel.frame = CGRectMake(0, 0, self.view.bounds.size.width - 150, 30);
+        
         NSString* avatarString = [[ContactViewCell utility] getAvatarOf:contact];
         NSString* nameString = [[ContactViewCell utility] getContactFullNameOf:contact];
         
         self.iconLabel.attributedText = [[NSAttributedString alloc] initWithString:avatarString];
         self.nameLabel.attributedText = [[NSAttributedString alloc] initWithString:nameString];
+        [self addSubnode:self.checkBox];
+        [self addSubnode:self.iconLabel];
+        [self addSubnode:self.nameLabel];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.view addSubnode:self.checkBox];
-            [self.view addSubnode:self.iconLabel];
-            [self.view addSubnode:self.nameLabel];
+            
         });
     }
     return self;
@@ -42,9 +48,9 @@
 - (void) nodeDidLayout {
     NSLog(@"Layout");
 }
-/*
 - (ASLayoutSpec*) layoutSpecThatFits:(ASSizeRange)constrainedSize {
-    ASRelativeLayoutSpec* checkBoxLayout = [ASRelativeLayoutSpec relativePositionLayoutSpecWithHorizontalPosition:ASRelativeLayoutSpecPositionStart verticalPosition:ASRelativeLayoutSpecPositionCenter sizingOption:ASRelativeLayoutSpecSizingOptionDefault child:self.checkBox];
-    ASRelativeLayoutSpec
-}*/
+    ASRelativeLayoutSpec* checkBoxRelativeSpec = [ASRelativeLayoutSpec relativePositionLayoutSpecWithHorizontalPosition:ASRelativeLayoutSpecPositionStart verticalPosition:ASRelativeLayoutSpecPositionCenter sizingOption:ASRelativeLayoutSpecSizingOptionDefault child:self.checkBox];
+    ASInsetLayoutSpec* checkBoxInsetSpec = [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(0, 40, 0, 30) child:checkBoxRelativeSpec];
+    return checkBoxInsetSpec;
+}
 @end

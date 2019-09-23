@@ -59,10 +59,9 @@
         if (canGet) {
             [self.businessInteface groupContactToSectionWithCompletion:^{
                 self.allContacts = self.businessInteface.dictionary;
-                /*
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.contactsNodeView reloadData];
-                });*/
+                });
             }];
         }
     }];
@@ -141,6 +140,12 @@
     } else {
         return nil;
     }
+}
+
+- (ASSizeRange)collectionNode:(ASCollectionNode *)collectionNode constrainedSizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGSize maxSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height / 2);
+    CGSize minSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height / 10);
+    return ASSizeRangeMake(minSize, maxSize);
 }
 @end
 
