@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4183C471BB5D97075409E65F /* libPods-ZAContactUITexture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87D2745ED0DA217259C20EC /* libPods-ZAContactUITexture.a */; };
 		53E59E2023365F8A00B3998E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E59E1F23365F8A00B3998E /* AppDelegate.m */; };
 		53E59E2323365F8A00B3998E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E59E2223365F8A00B3998E /* SceneDelegate.m */; };
-		53E59E2623365F8A00B3998E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E59E2523365F8A00B3998E /* ViewController.m */; };
+		53E59E2623365F8A00B3998E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E59E2523365F8A00B3998E /* MainViewController.m */; };
 		53E59E2923365F8A00B3998E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E59E2723365F8A00B3998E /* Main.storyboard */; };
 		53E59E2B23365F8B00B3998E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E59E2A23365F8B00B3998E /* Assets.xcassets */; };
 		53E59E2E23365F8B00B3998E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E59E2C23365F8B00B3998E /* LaunchScreen.storyboard */; };
 		53E59E3123365F8B00B3998E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E59E3023365F8B00B3998E /* main.m */; };
 		53E59E3B23365F8B00B3998E /* ZAContactUITextureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E59E3A23365F8B00B3998E /* ZAContactUITextureTests.m */; };
 		53E59E4623365F8B00B3998E /* ZAContactUITextureUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E59E4523365F8B00B3998E /* ZAContactUITextureUITests.m */; };
+		6E7BA573290B6908CDFD4117 /* libPods-ZAContactUITextureTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2396E95AFBFA366940FF5F /* libPods-ZAContactUITextureTests.a */; };
+		84F10B41EDC8D37352DBBA98 /* libPods-ZAContactUITextureUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D10D0A365195C08A744BB43 /* libPods-ZAContactUITextureUITests.a */; };
+		C2EEBF682338A2C1008EA407 /* ABAddressBookGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEBF672338A2C1008EA407 /* ABAddressBookGetter.m */; };
+		C2EEBF712338A2CC008EA407 /* ContactBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEBF6A2338A2CC008EA407 /* ContactBusiness.m */; };
+		C2EEBF722338A2CC008EA407 /* ContactWithStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEBF6C2338A2CC008EA407 /* ContactWithStatus.m */; };
+		C2EEBF732338A2CC008EA407 /* ContactUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEBF702338A2CC008EA407 /* ContactUtility.m */; };
+		C2EEBF812338A2FD008EA407 /* ContactInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEBF7A2338A2FD008EA407 /* ContactInstance.m */; };
+		C2EEBF822338A2FD008EA407 /* contactAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEBF7B2338A2FD008EA407 /* contactAdapter.m */; };
+		C2EEBF832338A2FD008EA407 /* MutableContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEBF7E2338A2FD008EA407 /* MutableContactList.m */; };
+		C2EEBF862338A75A008EA407 /* ContactViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEBF852338A75A008EA407 /* ContactViewCell.m */; };
+		C2EEBF892338B81D008EA407 /* HeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEBF882338B81D008EA407 /* HeaderViewCell.m */; };
+		C2EEBF8D2338BE3F008EA407 /* CNContactGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EEBF8C2338BE3F008EA407 /* CNContactGetter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AED38B6436D4F7BBFCEFBA2 /* Pods-ZAContactUITexture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAContactUITexture.release.xcconfig"; path = "Target Support Files/Pods-ZAContactUITexture/Pods-ZAContactUITexture.release.xcconfig"; sourceTree = "<group>"; };
+		2D10D0A365195C08A744BB43 /* libPods-ZAContactUITextureUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZAContactUITextureUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2396E95AFBFA366940FF5F /* libPods-ZAContactUITextureTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZAContactUITextureTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E59E1B23365F8A00B3998E /* ZAContactUITexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZAContactUITexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E59E1E23365F8A00B3998E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		53E59E1F23365F8A00B3998E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		53E59E2123365F8A00B3998E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		53E59E2223365F8A00B3998E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		53E59E2423365F8A00B3998E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		53E59E2523365F8A00B3998E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		53E59E2423365F8A00B3998E /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		53E59E2523365F8A00B3998E /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		53E59E2823365F8A00B3998E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53E59E2A23365F8B00B3998E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53E59E2D23365F8B00B3998E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +70,35 @@
 		53E59E4123365F8B00B3998E /* ZAContactUITextureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZAContactUITextureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E59E4523365F8B00B3998E /* ZAContactUITextureUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAContactUITextureUITests.m; sourceTree = "<group>"; };
 		53E59E4723365F8B00B3998E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		616254A30873F1E8D921749D /* Pods-ZAContactUITextureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAContactUITextureUITests.release.xcconfig"; path = "Target Support Files/Pods-ZAContactUITextureUITests/Pods-ZAContactUITextureUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6E42CFF895A760C43471A2DD /* Pods-ZAContactUITextureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAContactUITextureUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZAContactUITextureUITests/Pods-ZAContactUITextureUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		76037C9C71278081EF89EC52 /* Pods-ZAContactUITextureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAContactUITextureTests.release.xcconfig"; path = "Target Support Files/Pods-ZAContactUITextureTests/Pods-ZAContactUITextureTests.release.xcconfig"; sourceTree = "<group>"; };
+		C2EEBF662338A2C1008EA407 /* ABAddressBookGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAddressBookGetter.h; sourceTree = "<group>"; };
+		C2EEBF672338A2C1008EA407 /* ABAddressBookGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAddressBookGetter.m; sourceTree = "<group>"; };
+		C2EEBF6A2338A2CC008EA407 /* ContactBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactBusiness.m; sourceTree = "<group>"; };
+		C2EEBF6B2338A2CC008EA407 /* ContactUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUtility.h; sourceTree = "<group>"; };
+		C2EEBF6C2338A2CC008EA407 /* ContactWithStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactWithStatus.m; sourceTree = "<group>"; };
+		C2EEBF6D2338A2CC008EA407 /* StatusApplied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusApplied.h; sourceTree = "<group>"; };
+		C2EEBF6E2338A2CC008EA407 /* ContactBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactBusiness.h; sourceTree = "<group>"; };
+		C2EEBF6F2338A2CC008EA407 /* ContactWithStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactWithStatus.h; sourceTree = "<group>"; };
+		C2EEBF702338A2CC008EA407 /* ContactUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUtility.m; sourceTree = "<group>"; };
+		C2EEBF792338A2FD008EA407 /* contactAccessProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactAccessProtocol.h; sourceTree = "<group>"; };
+		C2EEBF7A2338A2FD008EA407 /* ContactInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInstance.m; sourceTree = "<group>"; };
+		C2EEBF7B2338A2FD008EA407 /* contactAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactAdapter.m; sourceTree = "<group>"; };
+		C2EEBF7C2338A2FD008EA407 /* MutableContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutableContactList.h; sourceTree = "<group>"; };
+		C2EEBF7D2338A2FD008EA407 /* PermissionStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionStatus.h; sourceTree = "<group>"; };
+		C2EEBF7E2338A2FD008EA407 /* MutableContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutableContactList.m; sourceTree = "<group>"; };
+		C2EEBF7F2338A2FD008EA407 /* ContactInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInstance.h; sourceTree = "<group>"; };
+		C2EEBF802338A2FD008EA407 /* contactAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactAdapter.h; sourceTree = "<group>"; };
+		C2EEBF842338A75A008EA407 /* ContactViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactViewCell.h; sourceTree = "<group>"; };
+		C2EEBF852338A75A008EA407 /* ContactViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactViewCell.m; sourceTree = "<group>"; };
+		C2EEBF872338B81D008EA407 /* HeaderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderViewCell.h; sourceTree = "<group>"; };
+		C2EEBF882338B81D008EA407 /* HeaderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderViewCell.m; sourceTree = "<group>"; };
+		C2EEBF8B2338BE3F008EA407 /* CNContactGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNContactGetter.h; sourceTree = "<group>"; };
+		C2EEBF8C2338BE3F008EA407 /* CNContactGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNContactGetter.m; sourceTree = "<group>"; };
+		C6B6B339EECD44059675385E /* Pods-ZAContactUITexture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAContactUITexture.debug.xcconfig"; path = "Target Support Files/Pods-ZAContactUITexture/Pods-ZAContactUITexture.debug.xcconfig"; sourceTree = "<group>"; };
+		D6F7859E1AA62D8A29479D62 /* Pods-ZAContactUITextureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAContactUITextureTests.debug.xcconfig"; path = "Target Support Files/Pods-ZAContactUITextureTests/Pods-ZAContactUITextureTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E87D2745ED0DA217259C20EC /* libPods-ZAContactUITexture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZAContactUITexture.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4183C471BB5D97075409E65F /* libPods-ZAContactUITexture.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7BA573290B6908CDFD4117 /* libPods-ZAContactUITextureTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +122,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F10B41EDC8D37352DBBA98 /* libPods-ZAContactUITextureUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44B7A96D63663F35DDEAD5F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6B6B339EECD44059675385E /* Pods-ZAContactUITexture.debug.xcconfig */,
+				0AED38B6436D4F7BBFCEFBA2 /* Pods-ZAContactUITexture.release.xcconfig */,
+				D6F7859E1AA62D8A29479D62 /* Pods-ZAContactUITextureTests.debug.xcconfig */,
+				76037C9C71278081EF89EC52 /* Pods-ZAContactUITextureTests.release.xcconfig */,
+				6E42CFF895A760C43471A2DD /* Pods-ZAContactUITextureUITests.debug.xcconfig */,
+				616254A30873F1E8D921749D /* Pods-ZAContactUITextureUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		539E09C723366E2500B245EA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				53E59E2123365F8A00B3998E /* SceneDelegate.h */,
+				53E59E2223365F8A00B3998E /* SceneDelegate.m */,
+				53E59E2423365F8A00B3998E /* MainViewController.h */,
+				53E59E2523365F8A00B3998E /* MainViewController.m */,
+				53E59E2723365F8A00B3998E /* Main.storyboard */,
+				C2EEBF842338A75A008EA407 /* ContactViewCell.h */,
+				C2EEBF852338A75A008EA407 /* ContactViewCell.m */,
+				C2EEBF872338B81D008EA407 /* HeaderViewCell.h */,
+				C2EEBF882338B81D008EA407 /* HeaderViewCell.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		53E59E1223365F8900B3998E = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +165,8 @@
 				53E59E3923365F8B00B3998E /* ZAContactUITextureTests */,
 				53E59E4423365F8B00B3998E /* ZAContactUITextureUITests */,
 				53E59E1C23365F8A00B3998E /* Products */,
+				44B7A96D63663F35DDEAD5F5 /* Pods */,
+				E7FB3E783F47DACF22003B7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,13 +183,13 @@
 		53E59E1D23365F8A00B3998E /* ZAContactUITexture */ = {
 			isa = PBXGroup;
 			children = (
+				C2EEBF8A2338BE3F008EA407 /* CNContactComponent */,
+				C2EEBF652338A2C1008EA407 /* ABAddressBookComponent */,
+				C2EEBF782338A2FD008EA407 /* DataAccess */,
+				C2EEBF692338A2CC008EA407 /* Bussiness */,
+				539E09C723366E2500B245EA /* ViewController */,
 				53E59E1E23365F8A00B3998E /* AppDelegate.h */,
 				53E59E1F23365F8A00B3998E /* AppDelegate.m */,
-				53E59E2123365F8A00B3998E /* SceneDelegate.h */,
-				53E59E2223365F8A00B3998E /* SceneDelegate.m */,
-				53E59E2423365F8A00B3998E /* ViewController.h */,
-				53E59E2523365F8A00B3998E /* ViewController.m */,
-				53E59E2723365F8A00B3998E /* Main.storyboard */,
 				53E59E2A23365F8B00B3998E /* Assets.xcassets */,
 				53E59E2C23365F8B00B3998E /* LaunchScreen.storyboard */,
 				53E59E2F23365F8B00B3998E /* Info.plist */,
@@ -137,6 +216,63 @@
 			path = ZAContactUITextureUITests;
 			sourceTree = "<group>";
 		};
+		C2EEBF652338A2C1008EA407 /* ABAddressBookComponent */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEBF662338A2C1008EA407 /* ABAddressBookGetter.h */,
+				C2EEBF672338A2C1008EA407 /* ABAddressBookGetter.m */,
+			);
+			path = ABAddressBookComponent;
+			sourceTree = "<group>";
+		};
+		C2EEBF692338A2CC008EA407 /* Bussiness */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEBF6E2338A2CC008EA407 /* ContactBusiness.h */,
+				C2EEBF6A2338A2CC008EA407 /* ContactBusiness.m */,
+				C2EEBF6B2338A2CC008EA407 /* ContactUtility.h */,
+				C2EEBF702338A2CC008EA407 /* ContactUtility.m */,
+				C2EEBF6F2338A2CC008EA407 /* ContactWithStatus.h */,
+				C2EEBF6D2338A2CC008EA407 /* StatusApplied.h */,
+				C2EEBF6C2338A2CC008EA407 /* ContactWithStatus.m */,
+			);
+			path = Bussiness;
+			sourceTree = "<group>";
+		};
+		C2EEBF782338A2FD008EA407 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEBF792338A2FD008EA407 /* contactAccessProtocol.h */,
+				C2EEBF7A2338A2FD008EA407 /* ContactInstance.m */,
+				C2EEBF7B2338A2FD008EA407 /* contactAdapter.m */,
+				C2EEBF7C2338A2FD008EA407 /* MutableContactList.h */,
+				C2EEBF7D2338A2FD008EA407 /* PermissionStatus.h */,
+				C2EEBF7E2338A2FD008EA407 /* MutableContactList.m */,
+				C2EEBF7F2338A2FD008EA407 /* ContactInstance.h */,
+				C2EEBF802338A2FD008EA407 /* contactAdapter.h */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		C2EEBF8A2338BE3F008EA407 /* CNContactComponent */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEBF8B2338BE3F008EA407 /* CNContactGetter.h */,
+				C2EEBF8C2338BE3F008EA407 /* CNContactGetter.m */,
+			);
+			path = CNContactComponent;
+			sourceTree = "<group>";
+		};
+		E7FB3E783F47DACF22003B7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E87D2745ED0DA217259C20EC /* libPods-ZAContactUITexture.a */,
+				2E2396E95AFBFA366940FF5F /* libPods-ZAContactUITextureTests.a */,
+				2D10D0A365195C08A744BB43 /* libPods-ZAContactUITextureUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53E59E4A23365F8B00B3998E /* Build configuration list for PBXNativeTarget "ZAContactUITexture" */;
 			buildPhases = (
+				CB6DDC59008A1508E1793056 /* [CP] Check Pods Manifest.lock */,
 				53E59E1723365F8A00B3998E /* Sources */,
 				53E59E1823365F8A00B3998E /* Frameworks */,
 				53E59E1923365F8A00B3998E /* Resources */,
@@ -161,6 +298,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53E59E4D23365F8B00B3998E /* Build configuration list for PBXNativeTarget "ZAContactUITextureTests" */;
 			buildPhases = (
+				7BB54DD488C7DDE663AFB4D8 /* [CP] Check Pods Manifest.lock */,
 				53E59E3223365F8B00B3998E /* Sources */,
 				53E59E3323365F8B00B3998E /* Frameworks */,
 				53E59E3423365F8B00B3998E /* Resources */,
@@ -179,6 +317,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53E59E5023365F8B00B3998E /* Build configuration list for PBXNativeTarget "ZAContactUITextureUITests" */;
 			buildPhases = (
+				9C33A70249E380D1809F6B2E /* [CP] Check Pods Manifest.lock */,
 				53E59E3D23365F8B00B3998E /* Sources */,
 				53E59E3E23365F8B00B3998E /* Frameworks */,
 				53E59E3F23365F8B00B3998E /* Resources */,
@@ -262,14 +401,93 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7BB54DD488C7DDE663AFB4D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZAContactUITextureTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C33A70249E380D1809F6B2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZAContactUITextureUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB6DDC59008A1508E1793056 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZAContactUITexture-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		53E59E1723365F8A00B3998E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53E59E2623365F8A00B3998E /* ViewController.m in Sources */,
+				C2EEBF712338A2CC008EA407 /* ContactBusiness.m in Sources */,
+				53E59E2623365F8A00B3998E /* MainViewController.m in Sources */,
+				C2EEBF722338A2CC008EA407 /* ContactWithStatus.m in Sources */,
+				C2EEBF732338A2CC008EA407 /* ContactUtility.m in Sources */,
 				53E59E2023365F8A00B3998E /* AppDelegate.m in Sources */,
+				C2EEBF892338B81D008EA407 /* HeaderViewCell.m in Sources */,
+				C2EEBF8D2338BE3F008EA407 /* CNContactGetter.m in Sources */,
+				C2EEBF862338A75A008EA407 /* ContactViewCell.m in Sources */,
+				C2EEBF832338A2FD008EA407 /* MutableContactList.m in Sources */,
+				C2EEBF812338A2FD008EA407 /* ContactInstance.m in Sources */,
+				C2EEBF822338A2FD008EA407 /* contactAdapter.m in Sources */,
 				53E59E3123365F8B00B3998E /* main.m in Sources */,
+				C2EEBF682338A2C1008EA407 /* ABAddressBookGetter.m in Sources */,
 				53E59E2323365F8A00B3998E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +655,7 @@
 		};
 		53E59E4B23365F8B00B3998E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6B6B339EECD44059675385E /* Pods-ZAContactUITexture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +673,7 @@
 		};
 		53E59E4C23365F8B00B3998E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AED38B6436D4F7BBFCEFBA2 /* Pods-ZAContactUITexture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +691,7 @@
 		};
 		53E59E4E23365F8B00B3998E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6F7859E1AA62D8A29479D62 /* Pods-ZAContactUITextureTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +712,7 @@
 		};
 		53E59E4F23365F8B00B3998E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76037C9C71278081EF89EC52 /* Pods-ZAContactUITextureTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -511,6 +733,7 @@
 		};
 		53E59E5123365F8B00B3998E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E42CFF895A760C43471A2DD /* Pods-ZAContactUITextureUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NLA5R24DG;
@@ -529,6 +752,7 @@
 		};
 		53E59E5223365F8B00B3998E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 616254A30873F1E8D921749D /* Pods-ZAContactUITextureUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NLA5R24DG;
