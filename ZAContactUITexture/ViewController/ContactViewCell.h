@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactViewCell : ASCellNode
 @property contactWithStatus* model;
+@property ASDisplayNode* labelBackground;
 @property ASImageNode* checkBox;
 @property ASTextNode* iconLabel;
 @property ASTextNode* nameLabel;

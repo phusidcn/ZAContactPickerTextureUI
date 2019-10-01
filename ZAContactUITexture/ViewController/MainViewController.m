@@ -143,7 +143,7 @@
 }
 
 - (ASSizeRange)collectionNode:(ASCollectionNode *)collectionNode constrainedSizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize maxSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height / 2);
+    CGSize maxSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height / 8);
     CGSize minSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height / 10);
     return ASSizeRangeMake(minSize, maxSize);
 }

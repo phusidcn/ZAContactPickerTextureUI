@@ -17,4 +17,9 @@
     }
     return self;
 }
+
+- (ASLayoutSpec*) layoutSpecThatFits:(ASSizeRange)constrainedSize {
+    ASRelativeLayoutSpec* relativeLayoutSpec = [ASRelativeLayoutSpec relativePositionLayoutSpecWithHorizontalPosition:ASRelativeLayoutSpecPositionStart verticalPosition:ASRelativeLayoutSpecPositionStart sizingOption:ASRelativeLayoutSpecSizingOptionDefault child:self.headerLabel];
+    return relativeLayoutSpec;
+}
 @end
