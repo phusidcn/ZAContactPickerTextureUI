@@ -33,4 +33,26 @@
     UIColor *Color = [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:0.5];
     return Color;
 }
+
+- (UIImage*) getIconOf:(contactWithStatus*) contact {
+    UIView* backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    UILabel* iconLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    [backView addSubview:iconLabel];
+    
+    backView.backgroundColor = [UIColor whiteColor];
+    
+    iconLabel.text = [self getAvatarOf:contact];
+    iconLabel.backgroundColor = [self getColorOf:contact];
+    iconLabel.font = [UIFont systemFontOfSize:20 weight:UIFontWeightMedium];
+    iconLabel.textAlignment = NSTextAlignmentCenter;
+    iconLabel.textColor = [UIColor whiteColor];
+    iconLabel.clipsToBounds = true;
+    iconLabel.layer.cornerRadius = 25;
+    
+    UIGraphicsBeginImageContextWithOptions(backView.bounds.size, backView.opaque, 0.0);
+    [[backView layer] renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage* result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return result;
+}
 @end

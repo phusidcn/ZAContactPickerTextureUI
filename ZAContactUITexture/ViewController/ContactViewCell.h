@@ -17,8 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property contactWithStatus* model;
 @property ASDisplayNode* labelBackground;
 @property ASImageNode* checkBox;
+@property ASImageNode* avatarImage;
 @property ASTextNode* iconLabel;
 @property ASTextNode* nameLabel;
+@property ASTextNode* phoneNumber;
 - (instancetype) initWithContactModel:(contactWithStatus*) contact;
 + (contactUtility*) utility;
 @end

@@ -123,6 +123,13 @@
 }
 
 - (ASCellNodeBlock) collectionNode:(ASCollectionNode *)collectionNode nodeBlockForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.isSearched) {
+        contactWithStatus* contact = [self.searchedContacts objectAtIndex:indexPath.row];
+        return ^{
+            ContactViewCell* cell = [[ContactViewCell alloc] initWithContactModel:contact];
+            return cell;
+        };
+    }
     NSString* sectionHeader = [[self.businessInteface titleForSection] objectAtIndex:indexPath.section];
     NSArray* array = [self.allContacts valueForKey:sectionHeader];
     contactWithStatus* contact = [array objectAtIndex:indexPath.row];
@@ -153,6 +160,7 @@
 @implementation MainViewController (Delegate)
 
 - (void) collectionNode:(ASCollectionNode *)collectionNode didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%ld %ld", (long)indexPath.section, (long)indexPath.row);
     
 }
 @end
@@ -162,8 +170,19 @@
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if (searchText.length == 0) {
         self.isSearched = false;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.contactsNodeView reloadData];
+        });
     } else {
-        self.isSearched = false;
+        self.isSearched = true;
+        [self.businessInteface searchContactWithKey:searchText completion:^(NSError* error) {
+            [self.businessInteface getSearchedContactWithCompletionHandler:^(NSArray<contactWithStatus*>* result) {
+                self.searchedContacts = result;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.contactsNodeView reloadData];
+                });
+            }];
+        }];
     }
 }
 @end

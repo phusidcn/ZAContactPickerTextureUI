@@ -14,6 +14,7 @@
     if (self) {
         self.headerLabel = [[ASTextNode alloc] init];
         self.headerLabel.attributedText = [[NSAttributedString alloc] initWithString:header];
+        [self addSubnode:self.headerLabel];
     }
     return self;
 }

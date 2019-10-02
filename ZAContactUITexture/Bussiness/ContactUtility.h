@@ -14,6 +14,7 @@
 - (NSString* _Nonnull) getAvatarOf:(contactWithStatus* _Nonnull) contact;
 - (NSString* _Nonnull) getPhoneNumberOf:(contactWithStatus* _Nonnull) contact;
 - (UIColor* _Nonnull) getColorOf:(contactWithStatus* _Nonnull) contact;
+- (UIImage* _Nonnull) getIconOf:(contactWithStatus* _Nonnull) contact;
 @end
 
 #endif /* ContactUtility_h */
