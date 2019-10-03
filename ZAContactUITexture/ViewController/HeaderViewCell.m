@@ -13,9 +13,13 @@
     self = [super init];
     if (self) {
         self.headerLabel = [[ASTextNode alloc] init];
+        self.seperator = [[ASDisplayNode alloc] init];
+        
         self.headerLabel.attributedText = [self attributedStringWith:header Color:[UIColor blackColor] AndFont:[UIFont systemFontOfSize:12 weight:UIFontWeightBold]];
-        self.backgroundColor = [UIColor lightGrayColor];
+        self.seperator.backgroundColor = [UIColor blackColor];
+        self.seperator.style.preferredSize = CGSizeMake(self.view.bounds.size.width, 1);
         [self addSubnode:self.headerLabel];
+        [self addSubnode:self.seperator];
     }
     return self;
 }
@@ -27,8 +31,10 @@
 }
 
 - (ASLayoutSpec*) layoutSpecThatFits:(ASSizeRange)constrainedSize {
+    ASRelativeLayoutSpec* seperatorLayout = [ASRelativeLayoutSpec relativePositionLayoutSpecWithHorizontalPosition:ASRelativeLayoutSpecPositionCenter verticalPosition:ASRelativeLayoutSpecPositionStart sizingOption:ASRelativeLayoutSpecSizingOptionDefault child:self.seperator];
     ASInsetLayoutSpec* headerLayout = [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(5, 10, 5, 10) child:self.headerLabel];
     ASRelativeLayoutSpec* relativeLayoutSpec = [ASRelativeLayoutSpec relativePositionLayoutSpecWithHorizontalPosition:ASRelativeLayoutSpecPositionStart verticalPosition:ASRelativeLayoutSpecPositionCenter sizingOption:ASRelativeLayoutSpecSizingOptionDefault child:headerLayout];
-    return relativeLayoutSpec;
+    ASStackLayoutSpec* overallLayout = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionVertical spacing:0 justifyContent:ASStackLayoutJustifyContentStart alignItems:ASStackLayoutAlignItemsStart children:@[seperatorLayout, relativeLayoutSpec]];
+    return overallLayout;
 }
 @end

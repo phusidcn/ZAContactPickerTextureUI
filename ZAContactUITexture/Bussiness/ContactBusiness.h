@@ -38,6 +38,7 @@
 - (void) selectSearchedContactAtIndexPath:(NSIndexPath*_Nullable) indexPath completion: (void(^_Nullable)(NSError* _Nullable)) completion;
 - (void) deselectSearchedContactAt:(NSIndexPath*_Nullable) indexPath completion:(void(^_Nullable)(NSError* _Nullable)) completion;
 
+- (void) getContatAtIndexPath:(NSIndexPath* _Nullable) indexPath WithCompletionHandler:(void(^_Nullable)(contactWithStatus* _Nonnull)) completion;
 - (void) getSelectedContactWithCompletionHandler: (void(^_Nullable)(NSArray<contactWithStatus*>* _Nullable)) completion;
 - (void) getSearchedContactWithCompletionHandler:(void(^_Nullable)(NSArray<contactWithStatus*>* _Nullable)) completion;
 

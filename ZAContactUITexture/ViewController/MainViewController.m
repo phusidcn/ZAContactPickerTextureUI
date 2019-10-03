@@ -27,11 +27,22 @@
 @interface MainViewController (DataSource) <ASCollectionDataSource>
 @end
 
+@interface MainViewController (ContactsNodeViewDataSource)
+@end
+
+@interface MainViewController (SelectedNodeViewDataSource)
+@end
+
 @interface MainViewController (Delegate) <ASCollectionDelegate>
 @end
 
-@interface MainViewController (SearchDelegate) <UISearchBarDelegate>
+@interface MainViewController (ContactsNodeViewDelegate)
+@end
 
+@interface MainViewController (SelectedNodeViewDelegate)
+@end
+
+@interface MainViewController (SearchDelegate) <UISearchBarDelegate>
 @end
 
 @implementation MainViewController
@@ -164,8 +175,30 @@
 
 - (void) collectionNode:(ASCollectionNode *)collectionNode didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%ld %ld", (long)indexPath.section, (long)indexPath.row);
-    
+    [self.businessInteface getContatAtIndexPath:indexPath WithCompletionHandler:^(contactWithStatus* contact) {
+        if (contact.isSelected) {
+            [self.businessInteface deselectContactAtIndexPath:indexPath completion:^(NSError* error) {
+                [self updateUIWhenChangeContactAtIndexPath:indexPath];
+            }];
+        } else {
+            [self.businessInteface selectOneContactAtIndexPath:indexPath completion:^(NSError* error) {
+                [self updateUIWhenChangeContactAtIndexPath:indexPath];
+            }];
+        }
+    }];
 }
+
+- (void) updateUIWhenChangeContactAtIndexPath:(NSIndexPath*) indexPath {
+    self.allContacts = [self.businessInteface dictionary];
+    [self.businessInteface getSelectedContactWithCompletionHandler:^(NSArray<contactWithStatus*>* result) {
+        self.selectedContacts = result;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.contactsNodeView reloadItemsAtIndexPaths:@[indexPath]];
+            //[self.selectedNodeView reloadData];
+        });
+    }];
+}
+
 @end
 
 #pragma mark : - SearchBar Delegate

@@ -258,6 +258,14 @@
     });
 }
 
+- (void) getContatAtIndexPath:(NSIndexPath *)indexPath WithCompletionHandler:(void(^_Nullable)(contactWithStatus* _Nonnull))completion {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSInteger index = [self convertIndexPathToIndex:indexPath];
+        contactWithStatus* result = [self.allContacts objectAtIndex:index];
+        completion(result);
+    });
+}
+
 - (void) getSelectedContactWithCompletionHandler:(void (^)(NSArray<contactWithStatus *> * _Nonnull))completion {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         dispatch_barrier_async([self safeDispatchQueue], ^{

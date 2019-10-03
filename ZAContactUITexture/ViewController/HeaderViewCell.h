@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HeaderViewCell : ASCellNode
 @property ASTextNode* headerLabel;
+@property ASDisplayNode* seperator;
 - (instancetype) initWithString:(NSString*) header;
 @end
 

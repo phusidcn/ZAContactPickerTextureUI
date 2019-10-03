@@ -14,10 +14,10 @@
             filePath = "ZAContactUITexture/ViewController/MainViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "-numberOfSectionsInCollectionNode:"
-            landmarkType = "7">
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "MainViewController(DataSource)"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,9 +30,9 @@
             filePath = "ZAContactUITexture/ViewController/MainViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "-collectionNode:numberOfItemsInSection:"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-numberOfSectionsInCollectionNode:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,8 +46,8 @@
             filePath = "ZAContactUITexture/ViewController/MainViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "-collectionNode:nodeBlockForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,9 +62,9 @@
             filePath = "ZAContactUITexture/ViewController/MainViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "-collectionNode:nodeForSupplementaryElementOfKind:atIndexPath:"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "-collectionNode:nodeBlockForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -78,8 +78,8 @@
             filePath = "ZAContactUITexture/ViewController/MainViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "ZAContactUITexture/ViewController/MainViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "-collectionNode:nodeBlockForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "ZAContactUITexture/ViewController/MainViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "-collectionNode:nodeBlockForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,9 +142,9 @@
             filePath = "ZAContactUITexture/ViewController/MainViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "-collectionNode:constrainedSizeForItemAtIndexPath:"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "-collectionNode:nodeForSupplementaryElementOfKind:atIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -158,8 +158,8 @@
             filePath = "ZAContactUITexture/ViewController/MainViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,17 +174,17 @@
             filePath = "ZAContactUITexture/ViewController/MainViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "-collectionNode:didSelectItemAtIndexPath:"
-            landmarkType = "7">
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "MainViewController(Delegate)"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C191340F-1F21-4B3F-8CC6-C7731CE8A46E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZAContactUITexture/ViewController/HeaderViewCell.m"
@@ -193,6 +193,182 @@
             startingLineNumber = "13"
             endingLineNumber = "13"
             landmarkName = "-initWithString:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "663F7098-45F5-4140-8C72-A26A46234FBC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZAContactUITexture/ViewController/MainViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "-collectionNode:didSelectItemAtIndexPath:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "663F7098-45F5-4140-8C72-A26A46234FBC - 4ae7057cf1b1d52c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MainViewController(Delegate) collectionNode:didSelectItemAtIndexPath:]"
+                  moduleName = "ZAContactUITexture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cpu11899/Documents/ZAContactUITexture/ZAContactUITexture/ViewController/MainViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "141">
+               </Location>
+               <Location
+                  uuid = "663F7098-45F5-4140-8C72-A26A46234FBC - e9bc4432b7a47a5b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__72-[MainViewController(Delegate) collectionNode:didSelectItemAtIndexPath:]_block_invoke"
+                  moduleName = "ZAContactUITexture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cpu11899/Documents/ZAContactUITexture/ZAContactUITexture/ViewController/MainViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4622C80E-D1E6-4B21-8433-F47EC94D36AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZAContactUITexture/ViewController/MainViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-collectionNode:didSelectItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC409CBF-5AF6-4759-A4EA-E89A3E02729F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZAContactUITexture/ViewController/MainViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "-collectionNode:didSelectItemAtIndexPath:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DC409CBF-5AF6-4759-A4EA-E89A3E02729F - e9bc4432b7a47a5b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__72-[MainViewController(Delegate) collectionNode:didSelectItemAtIndexPath:]_block_invoke"
+                  moduleName = "ZAContactUITexture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cpu11899/Documents/ZAContactUITexture/ZAContactUITexture/ViewController/MainViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "94">
+               </Location>
+               <Location
+                  uuid = "DC409CBF-5AF6-4759-A4EA-E89A3E02729F - 94eb4565260343cc"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__72-[MainViewController(Delegate) collectionNode:didSelectItemAtIndexPath:]_block_invoke_2"
+                  moduleName = "ZAContactUITexture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cpu11899/Documents/ZAContactUITexture/ZAContactUITexture/ViewController/MainViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "168EC470-7962-40D6-A292-33D81E1251AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZAContactUITexture/ViewController/MainViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "-collectionNode:didSelectItemAtIndexPath:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "168EC470-7962-40D6-A292-33D81E1251AF - e9bc4432b7a47a5b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__72-[MainViewController(Delegate) collectionNode:didSelectItemAtIndexPath:]_block_invoke"
+                  moduleName = "ZAContactUITexture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cpu11899/Documents/ZAContactUITexture/ZAContactUITexture/ViewController/MainViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "168EC470-7962-40D6-A292-33D81E1251AF - 322d4a3682a13b89"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__72-[MainViewController(Delegate) collectionNode:didSelectItemAtIndexPath:]_block_invoke.273"
+                  moduleName = "ZAContactUITexture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cpu11899/Documents/ZAContactUITexture/ZAContactUITexture/ViewController/MainViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "615B7788-9357-4121-BE05-A9B82BAFDB18"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZAContactUITexture/ViewController/MainViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "-updateUIWhenChangeContactAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
