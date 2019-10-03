@@ -42,6 +42,8 @@
     // Do any additional setup after loading the view.
     self.selectedViewFlowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.contactsViewFlowLayout = [[UICollectionViewFlowLayout alloc] init];
+    self.contactsViewFlowLayout.headerReferenceSize = CGSizeMake(self.view.bounds.size.width, 30);
+    
     self.allContacts = [[NSDictionary alloc] init];
     self.selectedContacts = [[NSArray alloc] init];
     self.searchedContacts = [[NSArray alloc] init];
@@ -54,6 +56,7 @@
     self.selectedNodeView = [[ASCollectionNode alloc] initWithFrame:CGRectMake(0, navigationHeight, viewSize.width, self.selectedViewHeight) collectionViewLayout:self.selectedViewFlowLayout];
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, navigationHeight + self.selectedViewHeight, self.view.bounds.size.width, 44)];
     self.contactsNodeView = [[ASCollectionNode alloc] initWithFrame:CGRectMake(0,navigationHeight +  self.selectedViewHeight + 44, viewSize.width, viewSize.height - self.selectedViewHeight - 44 - navigationHeight) collectionViewLayout:self.contactsViewFlowLayout];
+    [self.contactsNodeView registerSupplementaryNodeOfKind:UICollectionElementKindSectionHeader];
     
     [self.businessInteface getAllContacInDeviceWithCompletionHandler:^(BOOL canGet) {
         if (canGet) {
