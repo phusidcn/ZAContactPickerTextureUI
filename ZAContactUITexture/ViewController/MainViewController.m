@@ -28,9 +28,15 @@
 @end
 
 @interface MainViewController (ContactsNodeViewDataSource)
+- (NSInteger) numberOfContactsSection;
+- (NSInteger) numberOfRowInContactsSection:(NSInteger) section;
+- (ASCellNodeBlock) contactNodeAtIndexPath:(NSIndexPath*) indexPath;
 @end
 
 @interface MainViewController (SelectedNodeViewDataSource)
+- (NSInteger) numberOfSelectedSection;
+- (NSInteger) numberOfRowInSelectedSection;
+- (ASCellNodeBlock) selectedNodeAtIndexPath:(NSIndexPath*) indexPath;
 @end
 
 @interface MainViewController (Delegate) <ASCollectionDelegate>
@@ -111,11 +117,7 @@
         return 1;
     }
     if (collectionNode == self.contactsNodeView) {
-        if (self.isSearched) {
-            return 1;
-        } else {
-            return self.allContacts.allKeys.count;
-        }
+        return [self numberOfContactsSection];
     }
     return 0;
 }
@@ -125,18 +127,65 @@
         return self.selectedContacts.count;
     }
     if (collectionNode == self.contactsNodeView) {
-        if (self.isSearched) {
-            return self.searchedContacts.count;
-        } else {
-            NSString* sectionHeader = [[self.businessInteface titleForSection] objectAtIndex:section];
-            NSArray* array = [self.allContacts valueForKey:sectionHeader];
-            return array.count;
-        }
+        return [self numberOfRowInContactsSection:section];
     }
     return 0;
 }
 
 - (ASCellNodeBlock) collectionNode:(ASCollectionNode *)collectionNode nodeBlockForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (collectionNode == self.contactsNodeView) {
+        return [self contactNodeAtIndexPath:indexPath];
+    }
+    if (collectionNode == self.selectedNodeView) {
+        return [self selectedNodeAtIndexPath:indexPath];
+    }
+    return nil;
+}
+
+- (ASCellNode*) collectionNode:(ASCollectionNode *)collectionNode nodeForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        NSString* stringHeader = [[self.businessInteface titleForSection] objectAtIndex:indexPath.section];
+        HeaderViewCell* headerSuplementary = [[HeaderViewCell alloc] initWithString:stringHeader];
+        return headerSuplementary;
+    } else {
+        return nil;
+    }
+}
+
+- (ASSizeRange)collectionNode:(ASCollectionNode *)collectionNode constrainedSizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (collectionNode == self.contactsNodeView) {
+        CGSize maxSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height / 8);
+        CGSize minSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height / 10);
+        return ASSizeRangeMake(minSize, maxSize);
+    }
+    if (collectionNode == self.selectedNodeView) {
+        //CGSize maxSize = CGSizeMake(self., <#CGFloat height#>)
+    }
+    return ASSizeRangeMake(CGSizeMake(0, 0));
+}
+@end
+
+#pragma mark : - ContactViewNode DataSource
+@implementation MainViewController (ContactsNodeViewDataSource)
+- (NSInteger) numberOfContactsSection {
+    if (self.isSearched) {
+        return self.searchedContacts.count;
+    } else {
+        return self.allContacts.allKeys.count;
+    }
+}
+
+- (NSInteger) numberOfRowInContactsSection:(NSInteger)section {
+    if (self.isSearched) {
+        return self.searchedContacts.count;
+    } else {
+        NSString* sectionHeader = [[self.businessInteface titleForSection] objectAtIndex:section];
+        NSArray* array = [self.allContacts valueForKey:sectionHeader];
+        return array.count;
+    }
+}
+
+- (ASCellNodeBlock) contactNodeAtIndexPath:(NSIndexPath*) indexPath {
     if (self.isSearched) {
         contactWithStatus* contact = [self.searchedContacts objectAtIndex:indexPath.row];
         return ^{
@@ -152,21 +201,24 @@
         return cell;
     };
 }
+@end
 
-- (ASCellNode*) collectionNode:(ASCollectionNode *)collectionNode nodeForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        NSString* stringHeader = [[self.businessInteface titleForSection] objectAtIndex:indexPath.section];
-        HeaderViewCell* headerSuplementary = [[HeaderViewCell alloc] initWithString:stringHeader];
-        return headerSuplementary;
-    } else {
-        return nil;
-    }
+#pragma mark : - Selected Node View DataSource
+@implementation MainViewController (SelectedNodeViewDataSource)
+- (NSInteger) numberOfSelectedSection {
+    return 1;
 }
 
-- (ASSizeRange)collectionNode:(ASCollectionNode *)collectionNode constrainedSizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize maxSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height / 8);
-    CGSize minSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height / 10);
-    return ASSizeRangeMake(minSize, maxSize);
+- (NSInteger) numberOfRowInSelectedSection {
+    return [self.selectedContacts count];
+}
+
+- (ASCellNodeBlock) selectedNodeAtIndexPath:(NSIndexPath *)indexPath {
+    contactWithStatus* contact = [self.selectedContacts objectAtIndex:indexPath.row];
+    return ^{
+        SelectedViewCell* cell = [[SelectedViewCell alloc] initWithContact:contact];
+        return cell;
+    };
 }
 @end
 
@@ -175,6 +227,9 @@
 
 - (void) collectionNode:(ASCollectionNode *)collectionNode didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%ld %ld", (long)indexPath.section, (long)indexPath.row);
+    if (self.isSearched) {
+        [self.businessInteface ]
+    }
     [self.businessInteface getContatAtIndexPath:indexPath WithCompletionHandler:^(contactWithStatus* contact) {
         if (contact.isSelected) {
             [self.businessInteface deselectContactAtIndexPath:indexPath completion:^(NSError* error) {
@@ -194,7 +249,7 @@
         self.selectedContacts = result;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.contactsNodeView reloadItemsAtIndexPaths:@[indexPath]];
-            //[self.selectedNodeView reloadData];
+            [self.selectedNodeView reloadData];
         });
     }];
 }

@@ -17,9 +17,9 @@
         
         self.headerLabel.attributedText = [self attributedStringWith:header Color:[UIColor blackColor] AndFont:[UIFont systemFontOfSize:12 weight:UIFontWeightBold]];
         self.seperator.backgroundColor = [UIColor blackColor];
-        self.seperator.style.preferredSize = CGSizeMake(self.view.bounds.size.width, 1);
-        [self addSubnode:self.headerLabel];
+        self.seperator.style.preferredSize = CGSizeMake(self.view.bounds.size.width, 5);
         [self addSubnode:self.seperator];
+        [self addSubnode:self.headerLabel];
     }
     return self;
 }
@@ -31,7 +31,8 @@
 }
 
 - (ASLayoutSpec*) layoutSpecThatFits:(ASSizeRange)constrainedSize {
-    ASRelativeLayoutSpec* seperatorLayout = [ASRelativeLayoutSpec relativePositionLayoutSpecWithHorizontalPosition:ASRelativeLayoutSpecPositionCenter verticalPosition:ASRelativeLayoutSpecPositionStart sizingOption:ASRelativeLayoutSpecSizingOptionDefault child:self.seperator];
+    //ASRelativeLayoutSpec* seperatorLayout = [ASRelativeLayoutSpec relativePositionLayoutSpecWithHorizontalPosition:ASRelativeLayoutSpecPositionCenter verticalPosition:ASRelativeLayoutSpecPositionStart sizingOption:ASRelativeLayoutSpecSizingOptionDefault child:self.seperator];
+    ASInsetLayoutSpec* seperatorLayout = [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(0, 0, 0, 0) child:self.seperator];
     ASInsetLayoutSpec* headerLayout = [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(5, 10, 5, 10) child:self.headerLabel];
     ASRelativeLayoutSpec* relativeLayoutSpec = [ASRelativeLayoutSpec relativePositionLayoutSpecWithHorizontalPosition:ASRelativeLayoutSpecPositionStart verticalPosition:ASRelativeLayoutSpecPositionCenter sizingOption:ASRelativeLayoutSpecSizingOptionDefault child:headerLayout];
     ASStackLayoutSpec* overallLayout = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionVertical spacing:0 justifyContent:ASStackLayoutJustifyContentStart alignItems:ASStackLayoutAlignItemsStart children:@[seperatorLayout, relativeLayoutSpec]];

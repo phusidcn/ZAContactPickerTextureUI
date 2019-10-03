@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4183C471BB5D97075409E65F /* libPods-ZAContactUITexture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87D2745ED0DA217259C20EC /* libPods-ZAContactUITexture.a */; };
+		53ACED4E2346535700E6B6AE /* SelectedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ACED4D2346535700E6B6AE /* SelectedViewCell.m */; };
 		53E59E2023365F8A00B3998E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E59E1F23365F8A00B3998E /* AppDelegate.m */; };
 		53E59E2323365F8A00B3998E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E59E2223365F8A00B3998E /* SceneDelegate.m */; };
 		53E59E2623365F8A00B3998E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E59E2523365F8A00B3998E /* MainViewController.m */; };
@@ -52,6 +53,8 @@
 		0AED38B6436D4F7BBFCEFBA2 /* Pods-ZAContactUITexture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAContactUITexture.release.xcconfig"; path = "Target Support Files/Pods-ZAContactUITexture/Pods-ZAContactUITexture.release.xcconfig"; sourceTree = "<group>"; };
 		2D10D0A365195C08A744BB43 /* libPods-ZAContactUITextureUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZAContactUITextureUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2396E95AFBFA366940FF5F /* libPods-ZAContactUITextureTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZAContactUITextureTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53ACED4C2346535700E6B6AE /* SelectedViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectedViewCell.h; sourceTree = "<group>"; };
+		53ACED4D2346535700E6B6AE /* SelectedViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectedViewCell.m; sourceTree = "<group>"; };
 		53E59E1B23365F8A00B3998E /* ZAContactUITexture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZAContactUITexture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E59E1E23365F8A00B3998E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		53E59E1F23365F8A00B3998E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				C2EEBF852338A75A008EA407 /* ContactViewCell.m */,
 				C2EEBF872338B81D008EA407 /* HeaderViewCell.h */,
 				C2EEBF882338B81D008EA407 /* HeaderViewCell.m */,
+				53ACED4C2346535700E6B6AE /* SelectedViewCell.h */,
+				53ACED4D2346535700E6B6AE /* SelectedViewCell.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -482,6 +487,7 @@
 				53E59E2023365F8A00B3998E /* AppDelegate.m in Sources */,
 				C2EEBF892338B81D008EA407 /* HeaderViewCell.m in Sources */,
 				C2EEBF8D2338BE3F008EA407 /* CNContactGetter.m in Sources */,
+				53ACED4E2346535700E6B6AE /* SelectedViewCell.m in Sources */,
 				C2EEBF862338A75A008EA407 /* ContactViewCell.m in Sources */,
 				C2EEBF832338A2FD008EA407 /* MutableContactList.m in Sources */,
 				C2EEBF812338A2FD008EA407 /* ContactInstance.m in Sources */,

@@ -12,6 +12,7 @@
 #import "../Bussiness/ContactWithStatus.h"
 #import "ContactViewCell.h"
 #import "HeaderViewCell.h"
+#import "SelectedViewCell.h"
 
 @interface MainViewController : UIViewController < ASCollectionGalleryLayoutPropertiesProviding>
 
