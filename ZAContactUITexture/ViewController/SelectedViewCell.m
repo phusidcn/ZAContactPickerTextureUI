@@ -14,7 +14,9 @@
     if (self) {
         self.avatar = [[ASImageNode alloc] init];
         self.avatar.image = [[SelectedViewCell utility] getIconOf:contact];
+        self.model = contact;
         [self addSubnode:self.avatar];
+        [self layoutIfNeeded];
     }
     return self;
 }
@@ -26,6 +28,10 @@
         utility = [[contactUtility alloc] init];
     });
     return utility;
+}
+
+- (void) nodeDidLayout {
+    NSLog(@"Layout");
 }
 
 - (ASLayoutSpec*) layoutSpecThatFits:(ASSizeRange)constrainedSize {

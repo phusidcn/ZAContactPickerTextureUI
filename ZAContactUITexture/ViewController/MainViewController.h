@@ -14,7 +14,7 @@
 #import "HeaderViewCell.h"
 #import "SelectedViewCell.h"
 
-@interface MainViewController : UIViewController < ASCollectionGalleryLayoutPropertiesProviding>
+@interface MainViewController : UIViewController
 
 
 @end

@@ -100,7 +100,7 @@
 
 - (void) viewDidLayoutSubviews {
     CGSize viewSize = self.view.bounds.size;
-    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
+    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height + self.navigationController.navigationBar.frame.origin.y;
     
     self.selectedNodeView.frame = CGRectMake(0, navigationHeight, viewSize.width, self.selectedViewHeight);
     self.searchBar.frame = CGRectMake(0, navigationHeight + self.selectedViewHeight, viewSize.width, 44);
@@ -261,8 +261,7 @@
         self.selectedContacts = result;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.contactsNodeView reloadItemsAtIndexPaths:@[indexPath]];
-            [self.selectedNodeView reloadData];
-            [self.selectedNodeView relayoutItems];
+            [self.selectedNodeView reloadSections:[NSIndexSet ]]
         });
     }];
 }

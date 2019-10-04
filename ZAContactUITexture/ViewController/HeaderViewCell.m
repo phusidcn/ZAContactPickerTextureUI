@@ -30,6 +30,10 @@
     return result;
 }
 
+- (void) nodeDidLayout {
+    NSLog(@"Layout");
+}
+
 - (ASLayoutSpec*) layoutSpecThatFits:(ASSizeRange)constrainedSize {
     //ASRelativeLayoutSpec* seperatorLayout = [ASRelativeLayoutSpec relativePositionLayoutSpecWithHorizontalPosition:ASRelativeLayoutSpecPositionCenter verticalPosition:ASRelativeLayoutSpecPositionStart sizingOption:ASRelativeLayoutSpecSizingOptionDefault child:self.seperator];
     ASInsetLayoutSpec* seperatorLayout = [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(0, 0, 0, 0) child:self.seperator];

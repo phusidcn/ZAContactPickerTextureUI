@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SelectedViewCell : ASCellNode
 @property ASImageNode* avatar;
+@property contactWithStatus* model;
 - (instancetype) initWithContact:(contactWithStatus*) contact;
 + (contactUtility*) utility;
 @end
