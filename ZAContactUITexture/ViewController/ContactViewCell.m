@@ -15,9 +15,7 @@
         self.backgroundColor = [UIColor whiteColor];
         self.model = contact;
         self.checkBox = [[ASImageNode alloc] init];
-        self.iconLabel = [[ASTextNode alloc] init];
         self.nameLabel = [[ASTextNode alloc] init];
-        self.labelBackground = [[ASDisplayNode alloc] init];
         self.avatarImage = [[ASImageNode alloc] init];
         self.phoneNumber = [[ASTextNode alloc] init];
 
@@ -25,8 +23,6 @@
         NSString* nameString = [[ContactViewCell utility] getContactFullNameOf:contact];
         NSString* phoneNumber = [[ContactViewCell utility] getPhoneNumberOf:contact];
         
-        //self.iconLabel.attributedText = [self attributedStringWith:avatarString Color:[UIColor blackColor] AndFont:[UIFont systemFontOfSize:25]];
-        //self.labelBackground.backgroundColor = [[ContactViewCell utility] getColorOf:contact];
         [self checkImageOfContac:contact];
         self.checkBox.style.preferredSize = CGSizeMake(30, 30);
         
@@ -37,10 +33,8 @@
         
         self.phoneNumber.attributedText = [self attributedStringWith:phoneNumber Color:[UIColor lightGrayColor] AndFont:[UIFont systemFontOfSize:12 weight:UIFontWeightLight]];
 
-        //[self addSubnode:self.labelBackground];
         [self addSubnode:self.checkBox];
         [self addSubnode:self.avatarImage];
-        //[self addSubnode:self.iconLabel];
         [self addSubnode:self.nameLabel];
         [self addSubnode:self.phoneNumber];
     }

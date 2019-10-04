@@ -67,7 +67,7 @@
     self.selectedViewHeight = 60;
     
     CGSize viewSize = self.view.bounds.size;
-    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
+    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height + self.navigationController.navigationBar.frame.origin.y;
     
     self.businessInteface = [[ContactBussiness alloc] init];
     self.selectedNodeView = [[ASCollectionNode alloc] initWithFrame:CGRectMake(0, navigationHeight, viewSize.width, self.selectedViewHeight) collectionViewLayout:self.selectedViewFlowLayout];
@@ -114,7 +114,7 @@
 
 - (NSInteger) numberOfSectionsInCollectionNode:(ASCollectionNode *)collectionNode {
     if (collectionNode == self.selectedNodeView) {
-        return 1;
+        return [self numberOfSelectedSection];
     }
     if (collectionNode == self.contactsNodeView) {
         return [self numberOfContactsSection];
@@ -124,7 +124,7 @@
 
 - (NSInteger) collectionNode:(ASCollectionNode *)collectionNode numberOfItemsInSection:(NSInteger)section {
     if (collectionNode == self.selectedNodeView) {
-        return self.selectedContacts.count;
+        return [self numberOfRowInSelectedSection];
     }
     if (collectionNode == self.contactsNodeView) {
         return [self numberOfRowInContactsSection:section];
@@ -143,7 +143,7 @@
 }
 
 - (ASCellNode*) collectionNode:(ASCollectionNode *)collectionNode nodeForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader] && !self.isSearched) {
         NSString* stringHeader = [[self.businessInteface titleForSection] objectAtIndex:indexPath.section];
         HeaderViewCell* headerSuplementary = [[HeaderViewCell alloc] initWithString:stringHeader];
         return headerSuplementary;
@@ -159,7 +159,8 @@
         return ASSizeRangeMake(minSize, maxSize);
     }
     if (collectionNode == self.selectedNodeView) {
-        //CGSize maxSize = CGSizeMake(self., <#CGFloat height#>)
+        CGFloat size = self.selectedNodeView.frame.size.height - 5;
+        return ASSizeRangeMake(CGSizeMake(size, size));
     }
     return ASSizeRangeMake(CGSizeMake(0, 0));
 }
@@ -169,7 +170,7 @@
 @implementation MainViewController (ContactsNodeViewDataSource)
 - (NSInteger) numberOfContactsSection {
     if (self.isSearched) {
-        return self.searchedContacts.count;
+        return 1;
     } else {
         return self.allContacts.allKeys.count;
     }
@@ -228,19 +229,30 @@
 - (void) collectionNode:(ASCollectionNode *)collectionNode didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%ld %ld", (long)indexPath.section, (long)indexPath.row);
     if (self.isSearched) {
-        [self.businessInteface ]
+        [self.businessInteface getSearchedContactAtIndex:indexPath.row WithCompletionHandler:^(contactWithStatus* contact) {
+            if (contact.isSelected) {
+                [self.businessInteface deselectSearchedContactAt:indexPath completion:^(NSError* error) {
+                    [self updateUIWhenChangeContactAtIndexPath:indexPath];
+                }];
+            } else {
+                [self.businessInteface selectSearchedContactAtIndexPath:indexPath completion:^(NSError* error) {
+                    [self updateUIWhenChangeContactAtIndexPath:indexPath];
+                }];
+            }
+        }];
+    } else {
+        [self.businessInteface getContatAtIndexPath:indexPath WithCompletionHandler:^(contactWithStatus* contact) {
+            if (contact.isSelected) {
+                [self.businessInteface deselectContactAtIndexPath:indexPath completion:^(NSError* error) {
+                    [self updateUIWhenChangeContactAtIndexPath:indexPath];
+                }];
+            } else {
+                [self.businessInteface selectOneContactAtIndexPath:indexPath completion:^(NSError* error) {
+                    [self updateUIWhenChangeContactAtIndexPath:indexPath];
+                }];
+            }
+        }];
     }
-    [self.businessInteface getContatAtIndexPath:indexPath WithCompletionHandler:^(contactWithStatus* contact) {
-        if (contact.isSelected) {
-            [self.businessInteface deselectContactAtIndexPath:indexPath completion:^(NSError* error) {
-                [self updateUIWhenChangeContactAtIndexPath:indexPath];
-            }];
-        } else {
-            [self.businessInteface selectOneContactAtIndexPath:indexPath completion:^(NSError* error) {
-                [self updateUIWhenChangeContactAtIndexPath:indexPath];
-            }];
-        }
-    }];
 }
 
 - (void) updateUIWhenChangeContactAtIndexPath:(NSIndexPath*) indexPath {
@@ -250,6 +262,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.contactsNodeView reloadItemsAtIndexPaths:@[indexPath]];
             [self.selectedNodeView reloadData];
+            [self.selectedNodeView relayoutItems];
         });
     }];
 }
