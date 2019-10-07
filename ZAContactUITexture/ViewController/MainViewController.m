@@ -261,7 +261,7 @@
         self.selectedContacts = result;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.contactsNodeView reloadItemsAtIndexPaths:@[indexPath]];
-            [self.selectedNodeView reloadSections:[NSIndexSet ]]
+            [self.selectedNodeView reloadData];
         });
     }];
 }
