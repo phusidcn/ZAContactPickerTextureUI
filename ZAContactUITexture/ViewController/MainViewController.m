@@ -43,9 +43,11 @@
 @end
 
 @interface MainViewController (ContactsNodeViewDelegate)
+- (void) chooseContactAtIndexPath:(NSIndexPath*) indexPath;
 @end
 
 @interface MainViewController (SelectedNodeViewDelegate)
+- (void) chooseSelectedContactAtIndexPath:(NSIndexPath*) indexPath;
 @end
 
 @interface MainViewController (SearchDelegate) <UISearchBarDelegate>
@@ -193,14 +195,15 @@
             ContactViewCell* cell = [[ContactViewCell alloc] initWithContactModel:contact];
             return cell;
         };
+    } else {
+        NSString* sectionHeader = [[self.businessInteface titleForSection] objectAtIndex:indexPath.section];
+        NSArray* array = [self.allContacts valueForKey:sectionHeader];
+        contactWithStatus* contact = [array objectAtIndex:indexPath.row];
+        return ^{
+            ContactViewCell* cell = [[ContactViewCell alloc] initWithContactModel:contact];
+            return cell;
+        };
     }
-    NSString* sectionHeader = [[self.businessInteface titleForSection] objectAtIndex:indexPath.section];
-    NSArray* array = [self.allContacts valueForKey:sectionHeader];
-    contactWithStatus* contact = [array objectAtIndex:indexPath.row];
-    return ^{
-        ContactViewCell* cell = [[ContactViewCell alloc] initWithContactModel:contact];
-        return cell;
-    };
 }
 @end
 
@@ -228,6 +231,30 @@
 
 - (void) collectionNode:(ASCollectionNode *)collectionNode didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%ld %ld", (long)indexPath.section, (long)indexPath.row);
+    if (collectionNode == self.contactsNodeView) {
+        [self chooseContactAtIndexPath:indexPath];
+    };
+    if (collectionNode == self.selectedNodeView) {
+        [self chooseSelectedContactAtIndexPath:indexPath];
+    }
+}
+
+- (void) updateUIWhenChangeContactAtIndexPath:(NSIndexPath*) indexPath {
+    self.allContacts = [self.businessInteface dictionary];
+    [self.businessInteface getSelectedContactWithCompletionHandler:^(NSArray<contactWithStatus*>* result) {
+        self.selectedContacts = [NSArray arrayWithArray:result];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.contactsNodeView reloadItemsAtIndexPaths:@[indexPath]];
+            [self.selectedNodeView reloadData];
+        });
+    }];
+}
+
+@end
+
+@implementation MainViewController (ContactsNodeViewDelegate)
+
+- (void) chooseContactAtIndexPath:(NSIndexPath*) indexPath {
     if (self.isSearched) {
         [self.businessInteface getSearchedContactAtIndex:indexPath.row WithCompletionHandler:^(contactWithStatus* contact) {
             if (contact.isSelected) {
@@ -255,13 +282,15 @@
     }
 }
 
-- (void) updateUIWhenChangeContactAtIndexPath:(NSIndexPath*) indexPath {
-    self.allContacts = [self.businessInteface dictionary];
-    [self.businessInteface getSelectedContactWithCompletionHandler:^(NSArray<contactWithStatus*>* result) {
-        self.selectedContacts = result;
+@end
+
+@implementation MainViewController (SelectedNodeViewDelegate)
+
+- (void) chooseSelectedContactAtIndexPath:(NSIndexPath*) indexPath {
+    [self.businessInteface chooseContactIsSelectedAt:indexPath.row completion:^(NSUInteger index) {
+        NSIndexPath* contactIndexPath = [self.businessInteface convertIndexToIndexPath:index];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.contactsNodeView reloadItemsAtIndexPaths:@[indexPath]];
-            [self.selectedNodeView reloadData];
+            [self.contactsNodeView scrollToItemAtIndexPath:contactIndexPath atScrollPosition:UICollectionViewScrollPositionTop animated:true];
         });
     }];
 }

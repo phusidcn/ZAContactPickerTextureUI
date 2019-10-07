@@ -19,7 +19,6 @@
         self.avatarImage = [[ASImageNode alloc] init];
         self.phoneNumber = [[ASTextNode alloc] init];
 
-        NSString* avatarString = [[ContactViewCell utility] getAvatarOf:contact];
         NSString* nameString = [[ContactViewCell utility] getContactFullNameOf:contact];
         NSString* phoneNumber = [[ContactViewCell utility] getPhoneNumberOf:contact];
         
